@@ -1,10 +1,11 @@
 import Menu from "./menu/menu";
+import Chat from "./chat/chat";
 
 function App() {
   return (
     <div className="app">
       <Menu />
-      <div>Home</div>
+      <Chat />
       <div>Chat info</div>
     </div>
   );
