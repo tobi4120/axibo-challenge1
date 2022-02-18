@@ -1,5 +1,6 @@
 .menu {
     width: 350px;
+    padding: 0px 30px 0px 30px;
 
     &__header {
         display: flex;
@@ -12,15 +13,9 @@
         }
 
         &__appName {
-            font-family: "san-fran-semi", $back-up-fonts;
+            font-family: "san-fran-bold", $back-up-fonts;
             font-size: 1.3rem;
             color: $dark-blue;
-        }
-    }
-
-    &__userInfo {
-        img {
-            @include profileImg(50%, 80px)
         }
     }
 }

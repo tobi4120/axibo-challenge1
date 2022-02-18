@@ -41,10 +41,11 @@ p {
 
 .app {
   display: flex;
-  padding: 30px; }
+  padding: 30px 0px 30px 0px; }
 
 .menu {
-  width: 350px; }
+  width: 350px;
+  padding: 0px 30px 0px 30px; }
   .menu__header {
     display: flex;
     gap: 15px;
@@ -53,12 +54,76 @@ p {
       width: 50px;
       height: 50px; }
     .menu__header__appName {
-      font-family: "san-fran-semi", Helvetica, sans-serif;
+      font-family: "san-fran-bold", Helvetica, sans-serif;
       font-size: 1.3rem;
       color: #1b2338; }
+
+.menu__userInfo {
+  margin-top: 20px;
+  border: 1px solid #e3e7ea;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1b2338;
+  padding: 25px;
+  background-color: #f5f9fc; }
   .menu__userInfo img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
     object-fit: cover;
     object-position: center top; }
+  .menu__userInfo__name {
+    font-family: "san-fran-med", Helvetica, sans-serif;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 5px; }
+  .menu__userInfo__job {
+    color: #3e4a68;
+    font-size: 0.9rem; }
+  .menu__userInfo__status {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    .menu__userInfo__status__text {
+      margin-left: 10px;
+      font-size: 0.9rem;
+      color: #3e4a68; }
+  .menu__userInfo__toggle {
+    width: 30px;
+    height: 17px;
+    position: relative;
+    display: inline-block; }
+    .menu__userInfo__toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0; }
+      .menu__userInfo__toggle input:checked + .menu__userInfo__toggle__slider:before {
+        transform: translateX(12px); }
+    input:checked + .menu__userInfo__toggle__slider {
+      background-color: #1d4beb; }
+    .menu__userInfo__toggle__slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #ccc;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      transition: 0.3s;
+      border-radius: 10px; }
+      .menu__userInfo__toggle__slider:before {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 7px;
+        left: 5px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.3s;
+        border-radius: 50%; }
