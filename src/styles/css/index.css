@@ -1,3 +1,19 @@
+@font-face {
+  src: url(../../assets/fonts/SF-Pro.ttf);
+  font-family: san-fran; }
+
+@font-face {
+  src: url(../../assets/fonts/SF-Pro-Text-Medium.otf);
+  font-family: san-fran-med; }
+
+@font-face {
+  src: url(../../assets/fonts/SF-Pro-Text-Bold.otf);
+  font-family: san-fran-bold; }
+
+@font-face {
+  src: url(../../assets/fonts/SF-Pro-Text-Semibold.otf);
+  font-family: san-fran-semi; }
+
 *,
 *::after,
 *::before {
@@ -6,7 +22,8 @@
   box-sizing: inherit; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "san-fran", Helvetica, sans-serif; }
 
 ul {
   list-style-type: none; }
@@ -21,3 +38,27 @@ button {
 
 p {
   display: inline; }
+
+.app {
+  display: flex;
+  padding: 30px; }
+
+.menu {
+  width: 350px; }
+  .menu__header {
+    display: flex;
+    gap: 15px;
+    align-items: center; }
+    .menu__header img {
+      width: 50px;
+      height: 50px; }
+    .menu__header__appName {
+      font-family: "san-fran-semi", Helvetica, sans-serif;
+      font-size: 1.3rem;
+      color: #1b2338; }
+  .menu__userInfo img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center top; }

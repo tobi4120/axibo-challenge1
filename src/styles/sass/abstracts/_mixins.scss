@@ -1,0 +1,7 @@
+@mixin profileImg($border-radius, $size) {
+    border-radius: $border-radius;
+    width: $size;
+    height: $size;
+    object-fit: cover;
+    object-position: center top;
+}
