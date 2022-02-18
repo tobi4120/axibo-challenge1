@@ -20,7 +20,7 @@ export default function Conversations() {
     ])
 
     return (
-        <div>
+        <div className="menu__conversations">
             <div className="activeConversations">
                 <h3>Active conversations</h3>
                 <span>4</span>
@@ -28,7 +28,7 @@ export default function Conversations() {
             </div>
 
             {/* Conversations */}
-            <div>
+            <div className="menu__conversations__list">
                 {users.map((user, index) => {
                     return (
                         <ConvoThumbnail 

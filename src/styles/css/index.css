@@ -44,7 +44,7 @@ p {
   padding: 30px 0px 30px 0px; }
 
 .menu {
-  width: 350px;
+  width: 300px;
   padding: 0px 30px 0px 30px; }
   .menu__header {
     display: flex;
@@ -56,7 +56,7 @@ p {
     .menu__header__appName {
       font-family: "san-fran-bold", Helvetica, sans-serif;
       font-size: 1.3rem;
-      color: #1b2338; }
+      color: #293450; }
 
 .menu__userInfo {
   margin-top: 20px;
@@ -65,7 +65,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #1b2338;
+  color: #293450;
   padding: 25px;
   background-color: #f5f9fc; }
   .menu__userInfo img {
@@ -123,7 +123,40 @@ p {
         height: 7px;
         width: 7px;
         left: 5px;
-        bottom: 4px;
+        bottom: 5px;
         background-color: white;
         transition: 0.3s;
         border-radius: 50%; }
+
+.convoThumbnail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #3e4a68;
+  padding: 5px 15px;
+  border-radius: 12px;
+  transition: 0.2s;
+  cursor: pointer; }
+  .convoThumbnail:not(:last-child) {
+    margin-bottom: 12px; }
+  .convoThumbnail img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    object-position: center top; }
+  .convoThumbnail__name {
+    flex: 1; }
+  .convoThumbnail:hover {
+    background-color: #f5f9fc; }
+  .convoThumbnail__unread {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ec605b;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.9rem; }

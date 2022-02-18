@@ -1,0 +1,40 @@
+.convoThumbnail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $med-blue;
+    padding: 5px 15px;
+    border-radius: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    img {
+        @include profileImg(50%, 45px)
+    }
+
+    &__name {
+        flex: 1;
+    }
+
+    &:hover {
+        background-color: #f5f9fc;
+    }
+
+    &__unread {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $tomato-red;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 0.9rem;
+    }
+}
