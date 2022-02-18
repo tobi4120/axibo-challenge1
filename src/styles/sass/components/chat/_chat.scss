@@ -2,7 +2,7 @@
     flex: 1;
     background-color: $ghost-white;
     border-radius: 12px;
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
 
     &__messages {
         height: 85%;
@@ -17,11 +17,18 @@
                 @include profileImg(50%, 45px)
             }
 
+            &:first-child {
+                margin-top: 25px;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
 
             &__content {
+                max-width: 400px;
+                word-wrap: break-word;
+
                 .msg-txt {
                     padding: 15px;
                     display: block;
@@ -29,8 +36,8 @@
                     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07);
                 }
 
-                &__time {
-                    display: block;
+                .timeSent {
+                    display: block;        
                     margin-top: 10px;
                     color: $med-grey;
                     font-size: 0.75rem;
@@ -61,6 +68,15 @@
 .activeUser {
     display: flex;
     flex-direction: row-reverse;
+
+    .timeSent {
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-top: 10px;
+        color: $med-grey;
+        font-size: 0.75rem;
+    }
 }
 
 .activeUserMsg {

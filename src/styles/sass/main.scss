@@ -9,12 +9,13 @@
 // Components
     @import "./components/app";
 
-    // Chat
-    @import "./components/chat/chat";
-    @import "./components/chat/newMsg";
-
     // Menu
     @import "./components/menu/menu";
     @import "./components/menu/userInfo";
     @import "./components/menu/conversations";
     @import "./components/menu/convoThumbnail";
+
+    // Chat
+    @import "./components/chat/chat";
+    @import "./components/chat/newMsg";
+    @import "./components/chat/chatInfo";

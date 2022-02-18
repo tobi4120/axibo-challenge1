@@ -32,6 +32,9 @@ export default function Chat() {
     }
 
     const sendMsg = () => {
+        // Don't send a blank message
+        if (!newMsgInput) return
+
         // Clear input
         setNewMsgInput("");
 
@@ -79,7 +82,7 @@ export default function Chat() {
                                 </div>
 
                                 {/* Last sent */}
-                                <p className="chat__messages__message__content__time">{convo.lastSent}</p>
+                                <p className="timeSent">{convo.lastSent}</p>
                             </div>
                         </div>
                     )

@@ -1,4 +1,4 @@
-.menu__userInfo {
+.userInfo {
     margin-top: 20px;
     border: 1px solid $light-grey;
     border-radius: 15px;
@@ -50,7 +50,7 @@
             width: 0;
             height: 0;
 
-            &:checked + .menu__userInfo__toggle__slider:before {
+            &:checked + .userInfo__toggle__slider:before {
                 transform: translateX(12px);
             }
         }
