@@ -1,3 +1,44 @@
 .menu__conversations {
+    padding: 25px 0px;
 
+    &__header {
+        font-family: "san-fran-med";
+        color: $dark-blue;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+
+        &__name_and_num {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+        }
+
+        &__num {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: $ghost-white;
+            color: $dark-blue;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+
+        &__up {
+            transform: rotate(90deg) scale(0.8);
+        }
+
+        &__down {
+            transform: rotate(270deg) scale(0.8);
+        }
+    }
+
+    &__list {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

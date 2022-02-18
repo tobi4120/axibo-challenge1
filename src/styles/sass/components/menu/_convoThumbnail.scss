@@ -21,7 +21,7 @@
     }
 
     &:hover {
-        background-color: #f5f9fc;
+        background-color: $ghost-white;
     }
 
     &__unread {
@@ -37,4 +37,9 @@
         border-radius: 50%;
         font-size: 0.9rem;
     }
+}
+
+.active {
+    font-family: "san-fran-med", $back-up-fonts;
+    background-color: $ghost-white;
 }

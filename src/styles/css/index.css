@@ -41,11 +41,15 @@ p {
 
 .app {
   display: flex;
-  padding: 30px 0px 30px 0px; }
+  padding: 30px 0px 30px 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
 
 .menu {
   width: 300px;
-  padding: 0px 30px 0px 30px; }
+  padding: 0px 30px 0px 30px;
+  overflow: scroll; }
   .menu__header {
     display: flex;
     gap: 15px;
@@ -67,7 +71,7 @@ p {
   align-items: center;
   color: #293450;
   padding: 25px;
-  background-color: #f5f9fc; }
+  background-color: #f1f6fa; }
   .menu__userInfo img {
     border-radius: 50%;
     width: 80px;
@@ -128,6 +132,37 @@ p {
         transition: 0.3s;
         border-radius: 50%; }
 
+.menu__conversations {
+  padding: 25px 0px; }
+  .menu__conversations__header {
+    font-family: "san-fran-med";
+    color: #293450;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center; }
+    .menu__conversations__header__name_and_num {
+      display: flex;
+      flex: 1;
+      gap: 10px; }
+    .menu__conversations__header__num {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f1f6fa;
+      color: #293450;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 0.9rem; }
+    .menu__conversations__header__up {
+      transform: rotate(90deg) scale(0.8); }
+    .menu__conversations__header__down {
+      transform: rotate(270deg) scale(0.8); }
+  .menu__conversations__list {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
 .convoThumbnail {
   display: flex;
   align-items: center;
@@ -148,7 +183,7 @@ p {
   .convoThumbnail__name {
     flex: 1; }
   .convoThumbnail:hover {
-    background-color: #f5f9fc; }
+    background-color: #f1f6fa; }
   .convoThumbnail__unread {
     display: flex;
     flex-direction: column;
@@ -160,3 +195,7 @@ p {
     height: 20px;
     border-radius: 50%;
     font-size: 0.9rem; }
+
+.active {
+  font-family: "san-fran-med", Helvetica, sans-serif;
+  background-color: #f1f6fa; }
