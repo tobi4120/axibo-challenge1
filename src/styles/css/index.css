@@ -28,8 +28,9 @@ body {
 ul {
   list-style-type: none; }
 
-a {
-  text-decoration: none; }
+a:visited {
+  color: inherit;
+  cursor: pointer; }
 
 button {
   background-color: rgba(0, 0, 0, 0);
@@ -46,6 +47,108 @@ p {
   height: 100vh;
   overflow: hidden; }
 
+.chat {
+  flex: 1;
+  background-color: #f1f6fa;
+  border-radius: 12px;
+  padding: 25px; }
+  .chat__messages {
+    height: 85%;
+    overflow: scroll; }
+    .chat__messages__message {
+      display: flex;
+      gap: 10px;
+      font-size: 0.9rem; }
+      .chat__messages__message img {
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        object-position: center top; }
+      .chat__messages__message:not(:last-child) {
+        margin-bottom: 15px; }
+      .chat__messages__message__content .msg-txt {
+        padding: 15px;
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07); }
+      .chat__messages__message__content__time {
+        display: block;
+        margin-top: 10px;
+        color: #aaadaf;
+        font-size: 0.75rem; }
+    .chat__messages__picture {
+      position: relative; }
+      .chat__messages__picture__greenDot {
+        position: absolute;
+        top: 33px;
+        right: 0;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: #55b59d; }
+
+.activeUser {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.activeUserMsg {
+  background-color: #293450;
+  color: white; }
+
+.otherUserMsg {
+  background-color: white;
+  color: #293450; }
+
+.chat__newMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 15px; }
+  .chat__newMessage__addAttachment {
+    color: #8d9091;
+    transform: rotate(-45deg);
+    cursor: pointer; }
+  .chat__newMessage__input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    border: 1px solid #e3e7ea;
+    border-radius: 5px;
+    padding: 1px;
+    height: 40px;
+    padding: 10px; }
+    .chat__newMessage__input textarea {
+      resize: none;
+      font-family: "san-fran", Helvetica, sans-serif;
+      border: none;
+      flex: 1; }
+      .chat__newMessage__input textarea:focus {
+        outline: none; }
+    .chat__newMessage__input__emoji {
+      line-height: 0;
+      color: #eed892; }
+  .chat__newMessage__sendMsg {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #1d4beb;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer; }
+    .chat__newMessage__sendMsg__icon {
+      line-height: 0;
+      transform: scale(0.8); }
+
 .menu {
   width: 300px;
   padding: 0px 30px 0px 30px;
@@ -58,7 +161,7 @@ p {
       width: 50px;
       height: 50px; }
     .menu__header__appName {
-      font-family: "san-fran-bold", Helvetica, sans-serif;
+      font-family: "san-fran-semi", Helvetica, sans-serif;
       font-size: 1.3rem;
       color: #293450; }
 
@@ -171,7 +274,8 @@ p {
   padding: 5px 15px;
   border-radius: 12px;
   transition: 0.2s;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 0.9rem; }
   .convoThumbnail:not(:last-child) {
     margin-bottom: 12px; }
   .convoThumbnail img {
@@ -194,7 +298,7 @@ p {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    font-size: 0.9rem; }
+    font-size: 0.8rem; }
 
 .active {
   font-family: "san-fran-med", Helvetica, sans-serif;

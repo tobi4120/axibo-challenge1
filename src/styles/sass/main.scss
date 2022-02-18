@@ -9,6 +9,10 @@
 // Components
     @import "./components/app";
 
+    // Chat
+    @import "./components/chat/chat";
+    @import "./components/chat/newMsg";
+
     // Menu
     @import "./components/menu/menu";
     @import "./components/menu/userInfo";
